@@ -12,33 +12,46 @@ body {
     background-blend-mode: screen;
 }
 
-.cont {
-
+main {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    padding: 20px 20px;
+    padding: 140px 20px 20px;
+}
 
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.proyectos h2 {
+    width: 100%;
+}
+
+/* Estilo de vidrio compartido */
+.tarjeta-perfil,
+.tarjeta {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    color: #ffffff;
 }
 
 .tarjeta-perfil {
     position: absolute;
     top: 20px;
     right: 20px;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 15px 20px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    color: #ffffff;
-
 }
 
 .foto-perfil {
@@ -49,7 +62,7 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-.info-perfil h2 {
+.info-perfil h1 {
     margin: 0;
     font-size: 1.1rem;
 }
@@ -61,23 +74,23 @@ body {
 }
 
 .tarjeta {
-    box-sizing: border-box;
     width: 300px;
+    max-width: 100%;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .tarjeta:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+a {
+    color: #9db4ff;
+}
+
+a:hover {
+    color: orange;
 }
 
 @media (max-width: 600px) {
@@ -85,5 +98,9 @@ body {
         position: static;
         margin: 20px auto;
         width: fit-content;
+    }
+
+    main {
+        padding-top: 20px;
     }
 }
