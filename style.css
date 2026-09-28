@@ -90,7 +90,7 @@ a {
 }
 
 a:hover {
-    color: orange;
+    color: yellow;
 }
 
 @media (max-width: 600px) {
